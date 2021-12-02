@@ -22,4 +22,4 @@
 (defn -main
   [& args]
   (println "The answer to part 1 is" (depth-counter (input1 "resources/input1") first))
-  (println "The answer to part 1 is" (depth-counter (input1 "resources/input1") sums)))
+  (println "The answer to part 2 is" (depth-counter (input1 "resources/input1") sums)))

@@ -1,7 +1,6 @@
-(ns advent-of-code-2021.core
-  (:gen-class))
+(ns advent-of-code-2021.core)
 
-(defn input1 [path] (map #(Integer/parseInt %)
+(defn input [path] (map #(Integer/parseInt %)
                          (-> (slurp path)
                              (clojure.string/split-lines))))
 
@@ -19,7 +18,5 @@
             (if (nil? prev) acc (if (> (measurement-fn coll) prev) (cons prev acc) acc))
             measurement-fn))))
 
-(defn -main
-  [& args]
-  (println "The answer to part 1 is" (depth-counter (input1 "resources/input1") first))
-  (println "The answer to part 2 is" (depth-counter (input1 "resources/input1") sums)))
+  (println "The answer to part 1 is" (depth-counter (input "resources/input1") first))
+  (println "The answer to part 2 is" (depth-counter (input "resources/input1") sums))
